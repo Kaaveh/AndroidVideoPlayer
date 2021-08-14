@@ -1,20 +1,17 @@
 package com.arezoonazer.videoplayer.data.model
 
-import android.os.Parcelable
 import com.arezoonazer.videoplayer.data.database.Subtitle
-import kotlinx.android.parcel.Parcelize
+import java.io.Serializable
 
+data class VideoSource(
+    var videos: List<SingleVideo>? = null,
+    var selectedSourceIndex: Int = 0
+) : Serializable {
 
-@Parcelize
-data class VideoSource constructor(
-        var videos: List<SingleVideo>? = null,
-        var selectedSourceIndex: Int = 0
-) : Parcelable {
-
-    @Parcelize
-    data class SingleVideo(var url: String? = null,
-                           var subtitles: List<Subtitle>? = null,
-                           var watchedLength: Long? = null
-    ) : Parcelable
+    data class SingleVideo(
+        var url: String? = null,
+        var subtitles: List<Subtitle>? = null,
+        var watchedLength: Long? = null
+    ) : Serializable
 }
 
