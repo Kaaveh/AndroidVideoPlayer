@@ -179,7 +179,6 @@ public class PlayerActivity extends AppCompatActivity implements View.OnClickLis
             player.releasePlayer();
             player = null;
         }
-        PlayerApplication.getRefWatcher(this).watch(this);
     }
 
     @Override

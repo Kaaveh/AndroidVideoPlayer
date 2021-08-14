@@ -46,9 +46,4 @@ dependencies {
     //------------- Kotlin ------------------------------
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$library.kotlin"
 
-    //------------- leak canary ----------------------
-    debugImplementation 'com.squareup.leakcanary:leakcanary-android:1.6.3'
-    releaseImplementation 'com.squareup.leakcanary:leakcanary-android-no-op:1.6.3'
-
-
 }
